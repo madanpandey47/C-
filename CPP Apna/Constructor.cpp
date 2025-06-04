@@ -53,13 +53,13 @@ class Teacher{
 
     //Copy constructor:
     // A copy constructor is a special constructor in C++ that initializes an object using another object of the same class.
-    // Teacher(const Teacher &t) {
-    //     name = t.name;
-    //     age = t.age;
-    //     email = t.email;
-    //     dept = t.dept;
-    //     cout << "Teacher object created with copy constructor." << endl;
-    // }
+    Teacher(Teacher &t) {
+        cout << "Teacher object created with copy constructor." << endl;
+        this->name = t.name;
+        this->age = t.age;
+        this->email = t.email;
+        this->dept = t.dept;
+    }
 
     string getdept(){
         return dept;
@@ -86,8 +86,9 @@ class Teacher{
 
 int main(){ 
     Teacher t1("Madan", 30, "madan@example.com", "Mathematics"); // Constructor is called here when the object t1 is created
-    t1.getinfo();
-
+    // t1.getinfo();
+    Teacher t2(t1);
+    t2.getinfo();
     // cout << "Teacher's Department: " << t1.getdept() << endl;
 
     return 0;
