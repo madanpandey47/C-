@@ -1,23 +1,27 @@
 #include <iostream>
 #include <string>
-
 using namespace std;
 
 class base {
 protected:
-    int provar;     // Not initialized
+    int provar;
+
 public:
-    int pubvar;     // Not initialized
+    int pubvar;
+    base(){
+        pubvar=9;
+        cout<<pubvar<<endl;
+    }
 };
 
 class deri: protected base {
 protected:
     int provar;
 public:
-    int pubvar;
+    int pubvar= 45;
 
-    deri() {
-        cout << "hELLO" << endl;
+    deri() : base(){
+        cout << "HELLO" << endl;
     }
 
     void show() {
@@ -28,6 +32,8 @@ public:
 
 int main() {
     deri d1;
-    d1.show();  // Access is allowed because it's within the class
+    cout<<d1.pubvar<<endl;
+    d1.show();
     return 0;
 }
+
