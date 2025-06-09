@@ -4,20 +4,20 @@
 
 using namespace std;
 
-class fuck{
+class mine{
    private :
-   int fuckme = 20; 
+   int mineme = 20; 
 
 
    public :
    int getme()
 {
-    return fuckme;
+    return mineme;
 }
 };
 
 int main() {
-    fuck h;
+    mine h;
     int * ptr = (int *) &h;
     std::cout << "Value of get " << h.getme() << std::endl;
     std::cout << "Before " << *ptr<<endl;
