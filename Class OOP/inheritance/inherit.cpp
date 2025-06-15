@@ -11,6 +11,10 @@ class parent{
     int z;
 };
 
+
+// default constructor:
+// child (): base1(),base2();
+
 class child:protected parent{
     public:
     child(){
