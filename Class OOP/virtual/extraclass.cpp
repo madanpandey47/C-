@@ -1,30 +1,27 @@
 #include <iostream>
-#include <string>
+using  namespace  std;
+// method overloading same different signature
+// method overriding  ---parent implement override
 
-using namespace std;
-
-class Base1{
-    public:
-    virtual void collision(){
-
+class Base{
+public:
+    virtual void sum()
+    {
+        cout<<"Sum method from Parent";
     }
 };
 
-class Base2{
-    public:
-    virtual void collision(){
-
+class Child:public  Base{
+public:
+    void sum() override
+    {
+        cout<<"Sum method from Child";
     }
 };
 
-class Implementation: public Base1, public Base2{
-
-};
-
-
-
-int main() {
-    Implementation I;
-    
+int main()
+{
+    Child c;
+    c.sum();
     return 0;
 }
