@@ -1,7 +1,6 @@
 #include <iostream>
 #include <string>
-using namespace std;
-
+using namespace std;\
 /*
  * inline
  * friend function
@@ -18,11 +17,12 @@ public:
         this->rollNo = rollNo;
         this->name = name;
     }
+
     int getRollNo()
     {
         return  rollNo;
     }
-    
+
     friend  void setRollno(Student& s,int newRollNo);
 };
 
@@ -32,12 +32,15 @@ void  setRollno(Student& s,int newRollNo)
 }
 
 int main() {
+
     Student st(1,"niraj");
     cout<<st.getRollNo()<<endl;
 
     setRollno(st,11);
 
     cout<<st.getRollNo()<<endl;
+
+
 
     return 0;
 
