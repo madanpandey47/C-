@@ -2,6 +2,12 @@
 #include <string>
 using namespace std;
 
+/*
+ * inline
+ * friend function
+ *
+ */
+
 class Student
 {
 private:
@@ -12,72 +18,26 @@ public:
         this->rollNo = rollNo;
         this->name = name;
     }
-    bool compareObject(Student s)
+    int getRollNo()
     {
-        if(this->rollNo==s.rollNo)
-        {
-            return  true;
-        }
-        return false;
+        return  rollNo;
     }
-
-    bool operator==(Student s)
-    {
-        if(this->rollNo==s.rollNo)
-        {
-            return  true;
-        }
-        return false;
-    }
-
-    int sumRollNo(Student st)
-    {
-        return this->rollNo+st.rollNo;
-    }
-
-    int operator+(Student st)
-    {
-        return this->rollNo+st.rollNo;
-    }
-
+    
+    friend  void setRollno(Student& s,int newRollNo);
 };
 
+void  setRollno(Student& s,int newRollNo)
+{
+    s.rollNo= newRollNo;
+}
+
 int main() {
+    Student st(1,"niraj");
+    cout<<st.getRollNo()<<endl;
 
-    Student niraj(1,"niraj");
-    Student harilal(1,"harilal");
+    setRollno(st,11);
 
-//   cout<< niraj.compareObject(harilal);
-
-//   cout<< niraj.operator==(harilal);
-
-   int sumOfRollNo = niraj.sumRollNo(harilal);
-   cout<<sumOfRollNo;
-
-    int sumOfRollNoFromOperator = niraj.operator+(harilal);
-    cout<<sumOfRollNoFromOperator;
-
-    int t = niraj+harilal;
-
-    cout<<t;
-    //
-
-
-
-
-
-//    cout<< niraj==harilal;
-
-//if(niraj.operator==(harilal))
-//{
-//
-//}
-
-//   if(niraj==harilal)
-//   {
-//     cout<<"operator overload";
-//   }
-
+    cout<<st.getRollNo()<<endl;
 
     return 0;
 
