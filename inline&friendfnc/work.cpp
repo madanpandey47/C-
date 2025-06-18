@@ -24,7 +24,7 @@ public:
 
 bool operator==(Student& st1 , Student& st2)
 {
-    return st1.rollNo == st2.rollNo;
+    return (st1.rollNo == st2.rollNo);
 }
 
 int main() {
