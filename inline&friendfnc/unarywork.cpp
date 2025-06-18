@@ -20,8 +20,8 @@ class Student {
    }
 
       int operator-(Student s){
-         return -(s.rollno);
-         // return ++(s.rollno);
+         // return -(s.rollno);
+         return --(s.rollno);
       }
 
 };
