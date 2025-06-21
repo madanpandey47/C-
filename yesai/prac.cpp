@@ -73,7 +73,7 @@ int main() {
     s1.no =10;
     cout<<s1.no<<endl;
     s1.hello();
-    phoenix::hello();
+    // phoenix::hello();
     // s1.setName();
     // s1.getName();
     return 0;
