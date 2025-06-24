@@ -11,7 +11,7 @@ public:
     }
 };
 
-class Child:public  Base{
+class Child:public Base{
 public:
     void sum() override
     {
@@ -22,6 +22,7 @@ public:
 int main()
 {
     Child c;
-    c.sum();
+    Base B;
+    B.sum();
     return 0;
 }

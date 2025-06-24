@@ -43,7 +43,7 @@ class manxe {
 
 
 
-class student: protected manxe{
+class student: public manxe{
     public:
     int a;
      void hello(){
@@ -68,13 +68,12 @@ class phoenix:public student{
 };
 
 int main() {
-    manxe s1;
+    manxe m1;
 
-    s1.no =10;
-    cout<<s1.no<<endl;
-    s1.hello();
-    // phoenix::hello();
-    // s1.setName();
-    // s1.getName();
+    m1.no =10;
+    cout<<m1.no<<endl;
+    m1.hello();
+    student s1;
+    s1.manxe::hello();
     return 0;
 }
