@@ -5,6 +5,8 @@ private :
 int rollno; // 4 byte 
 std::string name; // 24 byte
 
+// In CPP just a class definition and object creation of it takes 1 bytes of memory space
+
 public :
 Solo(std::string name , int id){
    this->rollno = id;
@@ -34,6 +36,8 @@ int main(){
     */
 
     // bypassing private member for making accessible 
+
+
 
     int * ptr = (int *)&s;
     *ptr = 20;
