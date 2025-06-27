@@ -5,7 +5,8 @@ private :
 int rollno; // 4 byte 
 std::string name; // 24 byte
 
-// In CPP just a class definition and object creation of it takes 1 bytes of memory space
+// In CPP just a class definition and object creation of it takes 1 bytes of memory space 
+// Just to assign unique memory address to each object
 
 public :
 Solo(std::string name , int id){
