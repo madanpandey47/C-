@@ -29,7 +29,7 @@ int main(){
     s.getInfo();
 
     /*
-    //
+    /
     output:
 
     Student name Madan Pandey
@@ -37,8 +37,6 @@ int main(){
     */
 
     // bypassing private member for making accessible 
-
-
 
     int * ptr = (int *)&s;
     *ptr = 20;
