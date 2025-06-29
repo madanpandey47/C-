@@ -15,11 +15,11 @@ Solo(std::string name , int id){
 }
 
 void getInfo(){
-    std::cout << "Student name " << name << std::endl;
-    std::cout << "Student rollno " << rollno << std::endl;
+    std::cout << "Student name : " << name << std::endl;
+    std::cout << "Student rollno. : " << rollno << std::endl;
 }
-
 };
+
 
 int main(){
 
@@ -57,8 +57,8 @@ int main(){
     /*
     Reason why happens ?
 
-    coz the restriction is made by compiler for code but for memory 
+    Because the restriction is made by compiler for code but for memory 
 
-    memory is modifable so we just get the address of properties and modified it 
+    Memory is modifable so we just get the address of properties and modified it 
     */
 }

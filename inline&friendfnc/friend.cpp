@@ -1,6 +1,6 @@
 #include <iostream>
 #include <string>
-using namespace std;\
+using namespace std;
 /*
  * inline
  * friend function
@@ -33,14 +33,13 @@ void  setRollno(Student& s,int newRollNo)
 
 int main() {
 
-    Student st(1,"niraj");
-    cout<<st.getRollNo()<<endl;
+    Student st2(1,"Niraj");
+    cout<<st2.getRollNo()<<endl;
 
-    setRollno(st,11);
+    setRollno(st2,11);
 
-    cout<<st.getRollNo()<<endl;
-
-
+    cout<<st2.getRollNo()<<endl;
+    cout<<"Size of "<<sizeof(st2)<<endl;
 
     return 0;
 

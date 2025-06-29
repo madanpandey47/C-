@@ -1,7 +1,7 @@
 #include <iostream>
 using  namespace  std;
 // method overloading same different signature
-// method overriding  ---parent implement override
+// method overriding -parent implement override
 
 class Base{
 public:
