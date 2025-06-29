@@ -11,9 +11,11 @@ private:
 
 public:
     // Constructor
-    Employee(string n, int i) : name(n), id(i) {
-        totalEmployees++;  // Increment when object created
-    }
+    Employee(string n, int i) {
+    name = n;
+    id = i;
+    totalEmployees++; // Static data increased by 1.
+}
 
     // Destructor
     ~Employee() {
